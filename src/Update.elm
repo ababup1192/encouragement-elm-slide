@@ -5,6 +5,7 @@ import Model exposing (Model, Route(Slide))
 import Slides exposing (slides)
 import Navigation exposing (Location, newUrl)
 import UrlParser exposing (Parser, map, int, parseHash)
+import Ports.Highlight exposing (highlight)
 
 
 route : Parser (Route -> a) a
@@ -77,4 +78,4 @@ update msg model =
                         Nothing ->
                             Slide 0
             in
-                { model | currentPosition = currentPosition } ! []
+                { model | currentPosition = currentPosition } ! [ highlight () ]
