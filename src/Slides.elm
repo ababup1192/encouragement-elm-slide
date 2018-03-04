@@ -23,7 +23,7 @@ slides : Int -> List (Html Msg)
 slides count =
     [ toHtml [] <| """
 # elmのススメ
-![ゾーマ](./src/img/zoma.jpg)
+![ゾーマ](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/zoma.jpg?raw=true)
 
 ABAB↑↓BA @ababupdownba
 """
@@ -52,7 +52,7 @@ ABAB↑↓BA @ababupdownba
 - 信頼できるWebアプリケーションのための**めっちゃ**楽しい言語
 - 優れたパフォーマンスと実行時例外のないJavaScriptを生成します
 
-![elm トップページ](./src/img/elm-top.png)
+![elm トップページ](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/elm-top.png?raw=true)
 """
     , toHtml [] <| """
 ## どんな人にオススメ？
@@ -145,7 +145,7 @@ elmはむしろ不要と思われる文法を削って、ミニマルを保つ�
     , toHtml [] <| """
 ## カウンタ on TEA
 
-![TEA カウンタ](./src/img/tea-counter.png)
+![TEA カウンタ](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/tea-counter.png?raw=true)
 """
     , div []
         [ h2 [] [ text "テスト" ]
