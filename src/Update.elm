@@ -1,22 +1,16 @@
-module Update exposing (Msg(KeyDown, UrlChange), update)
+module Update exposing (update)
 
 import List exposing (length)
 import Model exposing (Model, Route(Slide))
 import Slides exposing (slides)
 import Navigation exposing (Location, newUrl)
 import UrlParser exposing (Parser, map, int, parseHash)
+import Messages exposing (Msg(..))
 
 
 route : Parser (Route -> a) a
 route =
     map Slide int
-
-
-type Msg
-    = Previous
-    | Next
-    | KeyDown Int
-    | UrlChange Location
 
 
 moveSlide : Bool -> Model -> Int -> ( Model, Cmd Msg )
@@ -30,6 +24,12 @@ moveSlide flag model nextPosition =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        Increment ->
+            { model | count = model.count + 1 } ! []
+
+        Decrement ->
+            { model | count = model.count - 1 } ! []
+
         KeyDown keyCode ->
             case keyCode of
                 13 ->
@@ -51,7 +51,7 @@ update msg model =
                         Slide position ->
                             position + 1
             in
-                moveSlide (length slides > nextPosition) model nextPosition
+                moveSlide (length (slides 0) > nextPosition) model nextPosition
 
         Previous ->
             let
@@ -69,7 +69,7 @@ update msg model =
                         Just position ->
                             case position of
                                 Slide p ->
-                                    if 0 <= p && p < length slides then
+                                    if 0 <= p && p < (length <| slides 0) then
                                         position
                                     else
                                         Slide 0

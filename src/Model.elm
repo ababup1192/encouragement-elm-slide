@@ -7,4 +7,5 @@ type Route
 
 type alias Model =
     { currentPosition : Route
+    , count : Int
     }

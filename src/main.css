@@ -4,3 +4,7 @@ body {
   font-size: 25px;
   background: rgba( 235, 235, 235, 1 );
 }
+
+code {
+  font-size: 0.8em;
+}

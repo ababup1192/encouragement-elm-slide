@@ -4,8 +4,8 @@ import Html exposing (Html, Attribute, div, text)
 import Html.Attributes exposing (style)
 import List.Extra exposing ((!!))
 import Model exposing (Model, Route(Slide))
-import Update exposing (Msg)
 import Slides exposing (slides)
+import Messages exposing (Msg)
 
 
 slideStyle : Attribute Msg
@@ -20,7 +20,7 @@ view model =
     div [ slideStyle ]
         [ case model.currentPosition of
             Slide currentPosition ->
-                case slides !! currentPosition of
+                case (slides model.count) !! currentPosition of
                     Just slide ->
                         slide
 
