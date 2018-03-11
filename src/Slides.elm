@@ -80,18 +80,19 @@ ABAB↑↓BA @ababupdownba
     - 型クラスがありません
     - メタプログラミングができません
     - 型レベルプログラミングができません
+    - -> そんな、あなたにはPureScript
 """
     , toHtml [] <| """
 ## elmの良いところ お品書き
 
 - 文法
     - 覚えるべき文法が少ない
-- エラー
-    - 丁寧で見やすいエラー
 - The Elm Architecture (TEA)
     - Webアプリケーションを綺麗に設計できる埋込み型フレームワーク
 - テスト
     - 徹底したイミュータブル データ構造でテスタブル
+- エラー
+    - 丁寧で見やすいエラー
 - elmで書かれたアプリケーション
     - どんなアプリケーションがelmに向いているか
 """
@@ -109,7 +110,7 @@ ABAB↑↓BA @ababupdownba
         , h3 [] [ text "Union Types" ]
         , unsafeEmbeddedGist "ababup1192/be4f7b854632e116ce829ae77bdd1f76"
         , h3 [] [ text "Type alias" ]
-        , unsafeEmbeddedGist "ababup1192/eaf3df2b3ecd1d98217e8f594822ef0a"
+        , unsafeEmbeddedGist "ababup1192/34ccba420063a16f49d810d6934c75c8"
         , h3 [] [ text "Record" ]
         , unsafeEmbeddedGist "ababup1192/092118a2d1269875e600dd7d60a68d7b"
         ]
@@ -124,7 +125,7 @@ ABAB↑↓BA @ababupdownba
 ## 文法 まとめ
 
 なんと3ページで(細かいものを除いて) 文法紹介が終わってしまいました！ 普段お使いの言語の文法の数と比べて見てください。
-elmはむしろ不要と思われる文法を削って、ミニマルを保つ言語です！
+elmはむしろ不要と思われる文法を削って、**ミニマルを保つ言語**です！
 """
     , toHtml [] <| """
 ## The Elm Architecture (TEA)
@@ -155,4 +156,14 @@ elmはむしろ不要と思われる文法を削って、ミニマルを保つ�
             ]
         , unsafeEmbeddedGist "ababup1192/7914478b0a05e1f62d8a03a826697017"
         ]
+    , toHtml [] <| """
+## エラー
+### 型間違え
+
+![型間違え]()
+
+### パターン漏れ
+
+![パターン漏れ]()
+"""
     ]
