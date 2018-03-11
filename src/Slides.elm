@@ -188,11 +188,37 @@ elmはむしろ不要と思われる文法を削って、**ミニマルを保つ
 # このスライド！！！
 
 - これがやりたかっただけ()
+- https://ababup1192.github.io/encouragement-elm-slide/
 """
     , toHtml [] <| """
 ## 日本のelmコミュニティ
 
+### Adventcalendar
 
+- 12人(2016) -> 28人(2017)
+- 25記事(1つ分) -> 50記事(2つ分)
 
+#### プログラミング言語 いいね数ランキング 4位!
+
+![いいねランキング](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/advent_calendar.png?raw=true)
+"""
+    , toHtml [] <| """
+## 日本のelmコミュニティ
+- [elm JP](https://elm-jp.connpass.com)
+- [elmなんか作ろう会](https://scrapbox.io/ababup1192/Elm%E3%81%AA%E3%82%93%E3%81%8B%E4%BD%9C%E3%82%8D%E3%81%86%E4%BC%9A)
+    - 不定期開催 全くの初心者も大歓迎 1hぐらいで、1アプリ完成させます！
+    - TODOリスト
+    - インクリメンタルサーチ
+    - TRPGダイス
+    - ガラケー入力
+    - おみくじ
+    - Qiitaユーザサーチ(Web API)
+"""
+    , toHtml [] <| """
+## 最後に
+
+- Webフロント初心者にこそオススメできる言語です！
+- 非常に生産性高く、モノづくりが楽しくなります！
+- とにかく触ってみましょう！
 """
     ]
