@@ -93,8 +93,10 @@ ABAB↑↓BA @ababupdownba
     - 徹底したイミュータブル データ構造でテスタブル
 - エラー
     - 丁寧で見やすいエラー
-- elmで書かれたアプリケーション
+- 採用事例
     - どんなアプリケーションがelmに向いているか
+- 日本のelmコミュニティ
+    - 盛り上がってるの？
 """
     , div []
         [ h2 [] [ text "文法 (1)" ]
@@ -160,10 +162,37 @@ elmはむしろ不要と思われる文法を削って、**ミニマルを保つ
 ## エラー
 ### 型間違え
 
-![型間違え]()
+![型間違え](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/type_mismatch.png?raw=true)
 
 ### パターン漏れ
 
-![パターン漏れ]()
+![パターン漏れ](https://github.com/ababup1192/encouragement-elm-slide/blob/master/src/img/missing_pattern.png?raw=true)
+"""
+    , toHtml [] <| """
+## 採用事例
+
+### Concourse CI
+
+![Concourse CI](https://qiita-image-store.s3.amazonaws.com/0/1852/4e14e419-5b1f-75f6-f623-6aac28c9788f.png)
+"""
+    , toHtml [] <| """
+## 採用事例
+
+### Unipos
+
+![Unipos](https://unipos.me/ja/img/common/ogp_logo.png)
+"""
+    , toHtml [] <| """
+## 採用事例
+
+# このスライド！！！
+
+- これがやりたかっただけ()
+"""
+    , toHtml [] <| """
+## 日本のelmコミュニティ
+
+
+
 """
     ]
